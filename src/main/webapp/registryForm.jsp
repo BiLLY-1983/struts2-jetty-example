@@ -36,6 +36,17 @@
     </td>
 
   </tr>
+
+  <!---->
+  <tr>
+      <td class="evenRow">
+          <s:fielderror fieldName="invoiceBean.grossAmount" />
+          <s:text name="form.grossAmount.message"/>
+          <s:textfield id="grossAmount" name="invoiceBean.grossAmount"/>
+      </td>
+  </tr>
+  <!---->
+
   <tr>
     <td class="evenRow">
         <s:submit align="left" value="Enviar"/>

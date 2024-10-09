@@ -25,5 +25,16 @@ public class InvoiceAction extends ActionSupport  {
         if (invoiceBean.getSubject().isEmpty()) {
             addFieldError("invoiceBean.subject", "El concepto es obligatorio.");
         }
+
+        // Validar que los datos del formulario no están vacíos
+        if (invoiceBean.getDateFrom() == null) {
+            addFieldError("invoiceBean.dateFrom", "La fecha de inicio es obligatoria.");
+        }
+        if (invoiceBean.getDateTo() == null) {
+            addFieldError("invoiceBean.dateTo", "La fecha de final es obligatoria.");
+        }
+        if (invoiceBean.getGrossAmount() <= 0) {
+            addFieldError("invoiceBean.grossAmount", "El importe bruto debe ser mayor a 0.");
+        }
     }
 }
